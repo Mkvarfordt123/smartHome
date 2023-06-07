@@ -21,12 +21,6 @@ class DevicesTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DeviceController.sharedInstance.devices.count
     }
@@ -35,7 +29,8 @@ class DevicesTableViewController: UITableViewController {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell()}
 
         let device = DeviceController.sharedInstance.devices[indexPath.row]
-        
+        cell.updateUI(device: device)
+        cell.delegate = self
         
         return cell
     }
@@ -84,4 +79,14 @@ class DevicesTableViewController: UITableViewController {
     }
     */
 
+} //end of class
+
+// MARK: - Extensions
+extension DevicesTableViewController : DeviceTableViewCellDelegate {
+    func isONSwithToggled(cell: DeviceTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let device = DeviceController.sharedInstance.devices[indexPath.row]
+        DeviceController.sharedInstance.switchIsOn(device: device)
+        cell.updateUI(device: device)
+    }
 } //end of class
