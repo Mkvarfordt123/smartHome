@@ -10,13 +10,13 @@
         <!--Smart Home-->
         <scene sceneID="C4P-54-hNP">
             <objects>
-                <tableViewController id="d5R-be-yRz" sceneMemberID="viewController">
+                <tableViewController id="d5R-be-yRz" customClass="DevicesTableViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JGh-ui-6Kv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="100" id="9yV-M4-96q">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="100" id="9yV-M4-96q" customClass="DeviceTableViewCell" customModule="SmartHome" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9yV-M4-96q" id="vDA-ym-XNG">
@@ -25,6 +25,9 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qmf-rr-Mei">
                                             <rect key="frame" x="310" y="25" width="51" height="50"/>
+                                            <connections>
+                                                <action selector="isOnSwitchTapped:" destination="9yV-M4-96q" eventType="valueChanged" id="ypo-yD-kI0"/>
+                                            </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Device Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bev-hT-rOX">
                                             <rect key="frame" x="24" y="15" width="282" height="70"/>
@@ -43,6 +46,10 @@
                                         <constraint firstItem="bev-hT-rOX" firstAttribute="leading" secondItem="vDA-ym-XNG" secondAttribute="leadingMargin" constant="4" id="w71-Ab-ADC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceTextLabel" destination="bev-hT-rOX" id="KWo-SB-zOJ"/>
+                                    <outlet property="isOnSwitch" destination="qmf-rr-Mei" id="esN-aE-i6c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,7 +58,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Smart Home" id="jDU-pl-W0D">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="USt-ru-yth"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="USt-ru-yth">
+                            <connections>
+                                <action selector="deviceButtonTapped:" destination="d5R-be-yRz" id="XKO-VR-8kW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bma-bH-a74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

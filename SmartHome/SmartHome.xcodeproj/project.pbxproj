@@ -14,6 +14,8 @@
 		14F0C8842A30FB7300B075F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F0C8822A30FB7300B075F3 /* LaunchScreen.storyboard */; };
 		14F0C8912A310E6F00B075F3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8902A310E6F00B075F3 /* Device.swift */; };
 		14F0C8932A310F4F00B075F3 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8922A310F4F00B075F3 /* DeviceController.swift */; };
+		14F0C8962A3111CA00B075F3 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */; };
+		14F0C8982A31130C00B075F3 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		14F0C8852A30FB7300B075F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F0C8902A310E6F00B075F3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		14F0C8922A310F4F00B075F3 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
+		14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		14F0C88B2A310CB900B075F3 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				14F0C8942A3111B300B075F3 /* ViewControllers */,
 				14F0C88F2A310E5100B075F3 /* Storyboard */,
 				14F0C88E2A310E4600B075F3 /* Models */,
 				14F0C88D2A310E3B00B075F3 /* Controllers */,
@@ -108,6 +113,15 @@
 				14F0C8822A30FB7300B075F3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		14F0C8942A3111B300B075F3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */,
+				14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F0C8912A310E6F00B075F3 /* Device.swift in Sources */,
+				14F0C8982A31130C00B075F3 /* DeviceTableViewCell.swift in Sources */,
 				14F0C8932A310F4F00B075F3 /* DeviceController.swift in Sources */,
+				14F0C8962A3111CA00B075F3 /* DevicesTableViewController.swift in Sources */,
 				14F0C8782A30FB7100B075F3 /* AppDelegate.swift in Sources */,
 				14F0C87A2A30FB7100B075F3 /* SceneDelegate.swift in Sources */,
 			);
