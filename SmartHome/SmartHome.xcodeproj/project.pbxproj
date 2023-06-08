@@ -16,6 +16,8 @@
 		14F0C8932A310F4F00B075F3 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8922A310F4F00B075F3 /* DeviceController.swift */; };
 		14F0C8962A3111CA00B075F3 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */; };
 		14F0C8982A31130C00B075F3 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */; };
+		14F0C89E2A32555200B075F3 /* ToggleAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C89D2A32555200B075F3 /* ToggleAllViewController.swift */; };
+		14F0C8A02A32562E00B075F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F0C89F2A32562E00B075F3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		14F0C8922A310F4F00B075F3 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 		14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		14F0C89D2A32555200B075F3 /* ToggleAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllViewController.swift; sourceTree = "<group>"; };
+		14F0C89F2A32562E00B075F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		14F0C88C2A310DD300B075F3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				14F0C89F2A32562E00B075F3 /* Constants.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			children = (
 				14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */,
 				14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */,
+				14F0C89D2A32555200B075F3 /* ToggleAllViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,11 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F0C8912A310E6F00B075F3 /* Device.swift in Sources */,
+				14F0C89E2A32555200B075F3 /* ToggleAllViewController.swift in Sources */,
 				14F0C8982A31130C00B075F3 /* DeviceTableViewCell.swift in Sources */,
 				14F0C8932A310F4F00B075F3 /* DeviceController.swift in Sources */,
 				14F0C8962A3111CA00B075F3 /* DevicesTableViewController.swift in Sources */,
 				14F0C8782A30FB7100B075F3 /* AppDelegate.swift in Sources */,
 				14F0C87A2A30FB7100B075F3 /* SceneDelegate.swift in Sources */,
+				14F0C8A02A32562E00B075F3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lNB-hP-fMe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pOJ-8d-rzd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,6 +58,7 @@
                             <outlet property="delegate" destination="d5R-be-yRz" id="mZM-XK-q7B"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="Eh3-2r-v2d"/>
                     <navigationItem key="navigationItem" title="Smart Home" id="jDU-pl-W0D">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="USt-ru-yth">
                             <connections>
@@ -69,10 +71,11 @@
             </objects>
             <point key="canvasLocation" x="823.66412213740455" y="-37.323943661971832"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Bedroom-->
         <scene sceneID="BaD-kI-OZA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNB-hP-fMe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bedroom" image="house.fill" catalog="system" id="6Ql-2S-s3C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="adj-qU-kZq">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -80,15 +83,84 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="d5R-be-yRz" kind="relationship" relationship="rootViewController" id="P9j-xs-GMA"/>
+                        <segue destination="d5R-be-yRz" kind="relationship" relationship="rootViewController" id="Egs-L5-y5o"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtA-hj-R6v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103.05343511450381" y="-37.323943661971832"/>
         </scene>
+        <!--All-->
+        <scene sceneID="nQy-jI-eeC">
+            <objects>
+                <viewController id="Yq2-dl-Zwp" customClass="ToggleAllViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HMH-72-Tqm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-G0-i7x">
+                                <rect key="frame" x="141.66666666666666" y="364.66666666666669" width="110" height="98.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSH-BJ-cxX">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="34.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Turn All On"/>
+                                        <connections>
+                                            <action selector="turnAllOnButtonTapped:" destination="Yq2-dl-Zwp" eventType="touchUpInside" id="Fbp-vZ-f5S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7P-dn-k3W">
+                                        <rect key="frame" x="0.0" y="64.333333333333314" width="110" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Turn All Off"/>
+                                        <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="Yq2-dl-Zwp" eventType="touchUpInside" id="IVz-qj-YiW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7bP-Sg-E8U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zxh-G0-i7x" firstAttribute="centerX" secondItem="7bP-Sg-E8U" secondAttribute="centerX" id="D1S-B9-HZY"/>
+                            <constraint firstItem="Zxh-G0-i7x" firstAttribute="width" secondItem="HMH-72-Tqm" secondAttribute="width" multiplier="0.8" priority="1" id="SlS-S3-Scs"/>
+                            <constraint firstItem="Zxh-G0-i7x" firstAttribute="centerY" secondItem="7bP-Sg-E8U" secondAttribute="centerY" id="r8G-Wv-aAn"/>
+                            <constraint firstItem="Zxh-G0-i7x" firstAttribute="height" secondItem="HMH-72-Tqm" secondAttribute="height" multiplier="0.75" priority="1" id="roe-V8-G21"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="All" image="star.fill" catalog="system" id="Rff-Eb-d2K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbA-og-0sv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="667"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iRU-ov-MLM">
+            <objects>
+                <tabBarController id="pOJ-8d-rzd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bbv-iN-QX9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yq2-dl-Zwp" kind="relationship" relationship="viewControllers" id="p73-DW-rwm"/>
+                        <segue destination="lNB-hP-fMe" kind="relationship" relationship="viewControllers" id="W9L-TW-oPY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IL5-Tt-lKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1152" y="188"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
