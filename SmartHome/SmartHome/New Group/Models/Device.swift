@@ -26,6 +26,4 @@ extension Device: Equatable {
     static func == (lhs: Device, rhs: Device) -> Bool {
         return lhs.uuid == rhs.uuid
     }
-    
-    
 }

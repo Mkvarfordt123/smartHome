@@ -81,7 +81,6 @@
 				14F0C8942A3111B300B075F3 /* ViewControllers */,
 				14F0C88F2A310E5100B075F3 /* Storyboard */,
 				14F0C88E2A310E4600B075F3 /* Models */,
-				14F0C88D2A310E3B00B075F3 /* Controllers */,
 				14F0C88C2A310DD300B075F3 /* SupportingFiles */,
 			);
 			path = "New Group";
@@ -126,6 +125,7 @@
 				14F0C8952A3111CA00B075F3 /* DevicesTableViewController.swift */,
 				14F0C8972A31130C00B075F3 /* DeviceTableViewCell.swift */,
 				14F0C89D2A32555200B075F3 /* ToggleAllViewController.swift */,
+				14F0C88D2A310E3B00B075F3 /* Controllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

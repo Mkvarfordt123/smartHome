@@ -33,6 +33,16 @@ class DeviceController {
         
     }
     
+    func toggleAllDevicesOn() {
+        devices.forEach { $0.isOn = true}
+        save()
+    }
+    
+    func toggleAllDevicesOff() {
+        devices.forEach { $0.isOn = false}
+        save()
+    }
+    
     // MARK: - Persistence
     func save() {
         guard let url = fileURL else { return }
